@@ -86,8 +86,8 @@ def image(request):
         person = Person.objects.get(user=request.user)
 
         # Below code should be uncommented if we decide delete old pix...
-        if person.pix.name != 'profile.png':
-            person.pix.delete()
+        # if person.pix.name != 'profile.png':
+        #     person.pix.delete()
         # replace the image and save to db
         person.pix = image
         person.save()
